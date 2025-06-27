@@ -22,10 +22,12 @@ canvas {
   font-size: 5vw;
   background: linear-gradient(45deg, #ff69b4, #800080);
   background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  background-clip: text;
+  color: #ff69b4;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 8px rgba(255,105,180,0.7);
+  text-shadow:
+    0 0 10px #ff69b4,
+    0 0 20px #800080;
   pointer-events: none;
   user-select: none;
   z-index: 1;
