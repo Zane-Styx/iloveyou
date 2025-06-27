@@ -20,20 +20,22 @@ canvas {
   transform: translate(-50%, -50%);
   font-family: monospace;
   font-size: 5vw;
+  
+  /* Proper gradient setup */
   background: linear-gradient(45deg, #ff69b4, #800080);
+  -webkit-background-clip: text;
   background-clip: text;
-  background-clip: text;
-  color: #ff69b4;
+
+  /* Ensure text is transparent */
+  color: transparent;
   -webkit-text-fill-color: transparent;
-  text-shadow:
-    0 0 10px #ff69b4,
-    0 0 20px #800080;
+
+  /* Glow effect */
+  text-shadow: 0 0 8px rgba(255,105,180,0.7);
+
+  /* Other settings */
   pointer-events: none;
   user-select: none;
   z-index: 1;
-
-  /* Fix pink box background on mobile */
-  display: inline-block;
-  box-decoration-break: clone;
-  background-origin: border-box;
 }
+
