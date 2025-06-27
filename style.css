@@ -19,12 +19,19 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: monospace;
-  font-size: 4vw;
+  font-size: 5vw;
   background: linear-gradient(45deg, #ff69b4, #800080);
   background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 8px rgba(255,105,180,0.7);
   pointer-events: none;
   user-select: none;
   z-index: 1;
+
+  /* Fix pink box background on mobile */
+  display: inline-block;
+  box-decoration-break: clone;
+  background-origin: border-box;
 }
